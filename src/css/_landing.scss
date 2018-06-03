@@ -1,0 +1,90 @@
+.s-options{
+	background: url("../img/BGhome-lowlark.jpg");
+	letter-spacing: rem(3);
+	min-height: 100vh;
+	position: relative;
+	overflow: hidden;
+	.wrapper{
+		padding: rem(15) 0;
+		height: auto;
+		z-index: 1;
+	}
+	h3{
+		margin-top: 10vh;
+	}
+	h3,h5,p {
+		text-shadow: 3px 3px 10px #060645, -3px -3px 10px #060645;
+	}
+	.read-more{
+		color: $purple;
+		text-shadow: 3px 3px 10px #060645, -3px -3px 10px #060645;
+	}
+	.video_bkg{
+		position: absolute;
+		right: 0;
+		height: 100%;
+	}
+	.s-menu{
+		margin-top: rem(15);
+		margin-bottom: rem(35);
+		display: flex;
+		justify-content: space-between;
+		a{
+			background: $purple;
+			padding: 5px;
+		}
+	}
+	.s-info{
+		margin: rem(30) 0;
+		li{
+			line-height: rem(28);
+		}
+	}
+	.s-text{margin-top: 10px;}
+	.landing-pic{
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		height: 90%;
+		width: auto;
+	}
+	.corp{
+		top: 85px;
+		height: 24%;
+	}
+}
+
+@media (max-width: 768px){
+	.s-options{
+		.s-menu{
+			letter-spacing: rem(1);
+			font-size: rem(10);
+		}
+		.corp{
+			top: 45px;
+			height: 24%;
+		}
+	}
+}
+
+@media (max-width: 520px){
+	.s-options{
+		.s-menu{
+			letter-spacing: rem(0);
+			font-size: rem(7);
+		}
+		.s-info{
+			h5{
+				font-size: rem(14);
+			}
+		}
+	}
+}
+
+@media (max-width: 520px) and (orientation: portrait){
+	.s-options{
+		.landing-pic{
+			display: none;
+		}
+	}
+}

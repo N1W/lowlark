@@ -1,0 +1,139 @@
+.contact_us {
+	background: url("../img/BGhome-lowlark.jpg");
+	min-height: auto;
+	.wrapper{height: auto;}
+	form{
+		width: 100%;
+		position: relative;
+		margin-top: 20px;
+		margin-bottom: 50px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		.fields,.radio {padding: rem(20);}
+		.fields{
+			width: calc(70% - 40px);
+			textarea{height: 20vh;}
+			input,textarea{
+				margin-top: 1.5vh;
+				margin-bottom: 1.5vh;
+				width: 100%;
+				border: $border-white;
+				color: $white;
+				@include placeholder{
+					color: $white;
+				}
+			}
+		}
+		.radio{
+			width: calc(30% - 40px);
+			display: flex;			
+			flex-direction: column;
+			justify-content: space-around;
+		}
+		.block{
+			background: $purple;
+			width: calc(100% - 80px);
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 20px;
+		}
+		.name-email{
+			display: flex;
+			justify-content: space-between;
+		}
+		#name{width: 45%;}
+		#email{width: 50%;}
+	}
+	.support{
+		display: flex;
+		flex-direction: row;
+		position: relative;
+		width: 100%;
+		padding: 15px 0;
+		h5,p {
+			margin-bottom: rem(20);
+		}
+		.pic{
+			width: 100%;
+			background: grey;
+			margin-right: 5%;
+			max-height: rem(300); 
+		}
+		.links{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			.column{
+				display: flex;
+				flex-direction: column;
+				i{
+					font-size: rem(20);
+					margin: 5px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 768px){
+	.contact_us {
+		form{
+			.fields,.radio {padding: rem(20) rem(5);}
+			.fields{
+				width: calc(70% - 10px);
+				textarea{height: 20vh;}
+				input,textarea{
+					margin-top: 1.5vh;
+					margin-bottom: 1.5vh;
+					width: 100%;
+					border: $border-white;
+					color: $white;
+					@include placeholder{
+						color: $white;
+					}
+				}
+			}
+			.radio{
+				display: none;
+			}
+			.block{
+				width: 100%;
+				justify-content: center;
+			}
+			.name-email{
+				display: block;
+			}
+			#name{width: 100%;}
+			#email{width: 100%;}
+		}
+		.support{
+			display: flex;
+			flex-direction: row;
+			position: relative;
+			width: 100%;
+			padding: 15px 0;
+			h5,p {
+				margin-bottom: rem(20);
+			}
+			.pic{
+				width: 100%;
+				background: grey;
+				margin-right: 5%;
+			}
+			.contacts{
+				width: 70%;
+			}
+			.links{
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				.column{
+					display: flex;
+					flex-direction: column;
+					i{font-size: rem(16); margin: rem(1)}
+				}
+			}
+		}
+	}
+}

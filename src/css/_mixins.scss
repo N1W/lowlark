@@ -1,0 +1,48 @@
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content}
+  &::-moz-placeholder {opacity: 1; @content}
+  &:-moz-placeholder {@content}
+  &:-ms-input-placeholder {@content}
+  &.placeholder {@content}
+}
+
+@mixin button-style {
+  color: white;
+  text-align: center;
+  display: block;
+  line-height: rem(45);
+  font-size: rem(22);
+  box-sizing: border-box;
+  &:hover {
+    cursor: pointer;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+@mixin button-purple {
+  @include button-style;
+  background: $purple;
+  border: $border-footer;
+  font-weight: 700;
+}
+
+@mixin button-white {
+  @include button-style;
+  background: transparent;
+  border: $border-white;
+  font-weight: 700;
+}
+
+@mixin button-footer {
+  @include button-style;
+  color: $purple;
+  line-height: rem(40);
+  font-size: rem(16);
+  background: transparent;
+  border: $border-footer;
+  font-weight: 300;
+}
+
+

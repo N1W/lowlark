@@ -1,0 +1,276 @@
+main{
+	.service{
+		background: url("../img/BGhome-old.jpg");
+		min-height: 100vh;
+		.wrapper{
+			height: auto;
+			padding-bottom: 20px;
+		}
+		.box1{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: stretch;
+			padding: 15px 0;
+			h3{letter-spacing: rem(3);}
+			.left{
+				position: absolute;
+				left: -20px;
+				top: calc(50% - 30px);
+				font-size: 60px;
+				color: $purple;
+			}
+			.right{
+				position: absolute;
+				top: calc(50% - 30px);
+				right: -20px;
+				font-size: 60px;
+				color: $purple;
+			}
+			.top{
+				position: absolute;
+				top: -42px;
+				right: calc(50% - 20px);
+				font-size: 60px;
+				color: $purple;
+			}
+			.service__title{
+				position: relative;
+				padding: 40px;
+				background: $purple;
+			}
+			.box2{
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: stretch;
+				.box3{
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
+					align-items: stretch;
+					width: 65%;
+					padding-right: 10px;
+					a{
+						width: 100%;
+						height: rem(220);
+						margin-bottom: 10px;
+						.custom,.landing{
+							height: 100%;
+							width: 100%;
+							display: flex;
+							flex-direction: row;
+							.pic{
+								width: 50%;
+								img{
+									width: 100%;
+									height: 100%;
+								}
+							}
+							.service__title{
+								width: calc(50% - 80px);
+							}
+						}
+					}
+				}
+				a{
+					width: 35%;
+					margin-bottom: 10px;
+					.info{
+						height: 100%;
+						display: flex;
+						flex-direction: column;
+						.pic{
+							height: 60%;
+							width: 100%;
+							img{
+								width: 100%;
+								height: 100%;
+							}
+						}
+						.service__title{
+							height: calc(40% - 80px);
+							width: calc(100% - 80px);
+						}
+					}
+				}
+			}
+			.corporative{
+				display: flex;
+				flex-direction: row;
+				width: 100%;
+				height: 250px;
+				.pic{
+					width: 60%;
+					img{
+						width: 100%;
+						height: 100%;
+					}
+				}
+				.service__title{
+					width: calc(40% - 80px);
+				}
+			}
+		}
+	}
+}
+
+
+@media (max-width: 1024px){
+	main{
+		.service{
+			h1{font-size: rem(40);}
+			.wrapper{
+			}
+			.box1{
+				h3{letter-spacing: rem(1);}
+				.service__title{
+					padding: 40px 10px 40px 10px;
+				}
+				.box2{
+					.box3{
+						a{
+							.custom,.landing{
+								.pic{
+									img{
+									}
+								}
+								.service__title{
+									width: calc(50% - 20px);
+								}
+							}
+						}
+					}
+					a{
+						.info{
+							.pic{
+								img{
+								}
+							}
+							.service__title{
+								height: calc(40% - 20px);
+								width: calc(100% - 20px);
+							}
+						}
+					}
+				}
+				.corporative{
+					.pic{
+						img{
+						}
+					}
+					.service__title{
+						width: calc(40% - 20px);
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 768px){
+	main{
+		.service{
+			h1{font-size: rem(35);letter-spacing: rem(1)}
+			.wrapper{
+			}
+			.box1{
+				h3{font-size: 18px; letter-spacing: rem(1);}
+				.service__title{
+					padding: 40px 10px 40px 10px;
+				}
+				.box2{
+					.box3{
+						a{
+							.custom,.landing{
+								.pic{
+									img{
+									}
+								}
+								.service__title{
+									width: calc(50% - 20px);
+								}
+							}
+						}
+					}
+					a{
+						.info{
+							.pic{
+								img{
+								}
+							}
+							.service__title{
+								height: calc(40% - 20px);
+								width: calc(100% - 20px);
+							}
+						}
+					}
+				}
+				.corporative{
+					.pic{
+						img{
+						}
+					}
+					.service__title{
+						width: calc(40% - 20px);
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 420px){
+	main{
+		.service{
+			h1{font-size: rem(35);letter-spacing: rem(1)}
+			.wrapper{
+			}
+			.box1{
+				h3{font-size: 14px; letter-spacing: rem(1);}
+				.service__title{
+					padding: 40px 5px 40px 5px;
+				}
+				.box2{
+					.box3{
+						a{
+							height: rem(110);
+							.custom,.landing{
+								.pic{
+									img{
+									}
+								}
+								.service__title{
+									width: calc(50% - 10px);
+								}
+							}
+						}
+					}
+					a{
+						.info{
+							.pic{
+								img{
+								}
+							}
+							.service__title{
+								padding: 10px 5px 10px 5px;
+								height: calc(40% - 20px);
+								width: calc(100% - 10px);
+							}
+						}
+					}
+				}
+				.corporative{
+					height: 125px;
+					.pic{
+						img{
+						}
+					}
+					.service__title{
+						width: calc(40% - 10px);
+					}
+				}
+			}
+		}
+	}
+}

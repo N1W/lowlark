@@ -1,0 +1,136 @@
+.about_us {
+	background: url("../img/BGhome-style.jpg");
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	.wrapper{
+		height: auto;
+		.container{
+			display: flex;
+			flex-direction: column;
+			.row{
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				margin: 10px 0;
+				img{
+					width: 350px;
+					height: 250px;
+					border-radius: rem(10);
+				}
+				.row_info{
+					width: 350px;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					margin: 5px 0 ;
+					h5{
+						line-height: rem(30);
+					}
+					p{
+						line-height: rem(25);
+					}
+				}
+			}
+			.row_last{
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				img{
+					width: 350px;
+					height: 250px;
+				}
+				h2{
+					font-size: rem(20);
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1024px){
+	.about_us {
+		.wrapper{
+			.container{
+				.row{
+					display: flex;
+					justify-content: space-around;
+					margin: 10px 0;
+					img{
+						width: 250px;
+						height: 150px;
+						border-radius: rem(10);
+					}
+					.row_info{
+						width: 250px;
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						h5{
+							font-size: rem(20);
+							line-height: rem(25);
+						}
+						p{
+							font-size: rem(16);
+							line-height: rem(20);
+						}
+					}
+				}
+				.row_last{
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					img{
+						width: 250px;
+						height: 150px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 766px){
+	.about_us {
+		.wrapper{
+			h1{font-size: rem(24);}
+			.container{
+				.row{
+					flex-direction: column;
+					margin: 10px 0;
+					img{
+						width: 250px;
+						height: 150px;
+						border-radius: rem(10);
+					}
+					.row_info{
+						width: 250px;
+						h5{
+							font-size: rem(18);
+							line-height: rem(20);
+						}
+						p{
+							font-size: rem(14);
+							line-height: rem(15);
+						}
+					}
+				}
+				.reverce{
+					flex-direction: column-reverse;
+				}
+				.row_last{
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					img{
+						width: 250px;
+						height: 150px;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,50 @@
+// Function pixels to rems:
+// You can wright only rem(ANY), its means that you transformed ANYpx to rem in your code
+
+@function rem($px) {
+  $rems: $px / 16;
+  @return #{$rems}rem;
+}
+
+// Colors:
+
+$white:				  #fff;                     // white
+
+$purple:              #060645;                  //Congress Blue
+$blue:                lightblue;
+
+$black:               #302f2e;                  //Black
+
+$yellow:              #ffb400;                  //Lemon
+
+// Borders:
+
+$border-footer:       rem(4) solid $purple;    //footer
+$border-white:   rem(4) solid $white; //bd4219;
+
+/*     ----------------- Typography -------------------     */
+
+$font-open-sans: 'Open Sans', sans-serif;
+$font-gloria-hallelujah: 'Gloria Hallelujah', cursive;
+
+
+// Font colors:
+$fc-white-main:       $white;     // main text color
+$fc-purple-footer:    $purple;    // footer text
+
+$link-white-main:       $white;     
+$link-purple-footer:    $purple;
+$link-yellow-sidebar:   $yellow;
+
+
+
+
+
+
+
+
+
+
+
+
+

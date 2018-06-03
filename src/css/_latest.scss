@@ -1,0 +1,85 @@
+.latest {
+	background: url("../img/BGhome-desires.jpg");
+	min-height: 100vh;
+	.wrapper{
+		.content{
+			display: flex;
+			padding: 20px 0;
+		}
+		height: auto;
+	}
+	.column{
+		width: 50%;
+		display: flex;
+		flex-direction: column;
+		margin-left: 5px;
+	}
+	.nli{
+		background: url("../img/header_bg.jpg");
+	}
+	.scrumi{
+		background: url("../img/scrumi.png");
+		text-shadow: 3px 3px 10px #060645, -3px -3px 10px #060645;
+	}
+	.box{
+		position: relative;
+		height: 50vh;
+		background-size: 100% 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		&:hover a{
+			opacity: 1;
+		}
+		a{
+			position: absolute;
+			top: 0;
+			left: 0;
+			padding: 20px;
+			width: calc(100% - 40px);
+			height: calc(100% - 40px);
+			transition: all 0.3s ease-in-out;
+			background: rgba(6,43,92,0.78);
+			text-align: center;
+			opacity: 0;
+			.goto{
+				position: absolute;
+				top: 50%;
+				left: 20%;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) and (orientation: portrait){
+	.latest {
+		.wrapper{
+			.content{
+				display: block;
+			}
+		}
+		.column{
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+		}
+		.box{
+			position: relative;
+			height: 50vh;
+			background-size: 100% 100%;
+			&:hover a{
+				opacity: 1;
+			}
+			a{
+				position: absolute;
+				top: 0;
+				left: 0;
+				padding: 5px;
+				width: calc(100% - 10px);
+				height: calc(100% - 10px);
+			}
+		}
+	}
+}

@@ -1,0 +1,134 @@
+@import "var";
+@import "mixins";
+
+/*     ----------------- Elements -------------------     */
+
+body {
+  background: $white;
+  font-family: $font-open-sans;
+  font-weight: 300;
+  color: $white;
+  font: 18px/1.454545;
+  min-width: 320px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+  color: $link-white-main;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+#newsblock {
+  position: absolute;
+  overflow: auto;
+  left: 79%;
+  top: 1vw;
+  height: 20vw;
+  width: 20vw;
+  cursor: move; }
+#newsblock .post-img {
+  width: 100%; }
+#newsblock:hover {
+  background-color: #060645;
+}
+#newsblock:hover a {
+  color: #ffb400;
+  cursor: pointer;
+}
+#newsblock .post-img:hover {
+  cursor: default;
+}
+
+//Fonts
+h1{
+	font-size: rem(60);
+  line-height: rem(65);
+	letter-spacing: rem(3);
+  font-weight: 700;
+}
+h2{font-size: rem(36);font-weight: 700;}
+h3{font-size: rem(34);font-weight: 700;}
+h4{font-size: rem(30);font-weight: 700;}
+h5{font-size: rem(24);font-weight: 700;}
+h6{font-size: rem(14);font-weight: 700;}
+p{font-size: rem(18);}
+strong{
+  font-weight: 700;
+  line-height: rem(30);
+}
+.font48{font-size: 3vw;}
+.font60{font-size: 4vw;}
+.font72{font-size: 5vw;}
+.font90{font-size: 6vw;}
+.font100{font-size: 8vw;}
+.footer-text{font-size: rem(12);}
+.bold{font-weight: 700;}
+.light{font-weight: 300;}
+.gloria{font-family: $font-gloria-hallelujah;}
+
+// Forms:
+form,
+fieldset {
+  margin: 0;
+  padding: 0;
+  border-style: none;
+}
+
+input[type='text'],
+input[type='tel'],
+input[type='email'],
+input[type='search'],
+input[type='password'],
+input[type='url'],
+input[type='date'],
+textarea {
+  @include placeholder{
+    color: $purple;
+  }
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  border: $border-footer;
+  padding: rem(10);
+  color: $purple; 
+  background: transparent;
+  &:focus {
+    outline: none;
+  }
+}
+
+textarea {
+  resize: none;
+  vertical-align: top;
+}
+
+input[type='checkbox'] {
+  // SVG sprite
+}
+// Buttons:
+
+input[type='submit'],
+button {
+  @include button-style;
+}
+
+.button-purple {
+  @include button-purple;
+}
+
+.button-white {
+  @include button-white;
+}
+
+.button-footer {
+  @include button-footer;
+}
+
+@media (max-width: 1024px) {
+  button{font-size: rem(15);}
+}
+
+

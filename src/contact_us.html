@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOWLARK</title>
+<!--     <link rel="shortcut icon" type="image/png" href=<%= require("./img/favicon.png") %> > -->
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Open+Sans:300,700" rel="stylesheet">
+</head>
+<body>
+    <aside>
+        <div id="show"><i class="fa fa-angle-double-right" aria-hidden="true"></i></div>
+        <div id="hide"><i class="fa fa-angle-double-left" aria-hidden="true"></i></div>
+        <a class="logo" href="#">
+            <object type="image/svg+xml" data="img/logo-white.svg">
+            </object>
+        </a>
+        <ul class="menu">
+           <li><a href="./index.php?controller=default&action=index">Home</a></li>
+           <li><a href="./index.php?controller=default&action=service">Service</a></li>
+           <li><a href="blog.html">Blog</a></li>
+           <li><a href="./index.php?controller=default&action=works">Latest works</a></li>
+       </ul>
+        <div class="contact-us">
+           <ul class="social">
+               <li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+               <li><a href="#"><i class="fa fa-skype" aria-hidden="true"></i></a></li>
+               <li><a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+           </ul>
+           <a href="#contact" class="bold">Contact Us</a>
+        </div>
+    </aside>
+    <main>
+       <section class="contact_us"> 
+        <div class="wrapper">   
+            <h1>CONTACT US</h1>
+            <form action="#">
+                <div class="block"> 
+                    <div class="fields">
+                        <div class="name-email">
+                            <input type="text" id="name" placeholder="Name">
+                            <input type="email" id="email" placeholder="E-mail">
+                        </div>
+                        <input type="tel" id="phone" placeholder="Phone">
+                        <textarea name="" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                    </div>
+                    <div class="radio">
+                        <p class="bold">I need help with:</p>
+                        <div class="radio_element">
+                          <input type="radio" id="contactChoice1"
+                          name="options" value="landing">
+                          <label for="contactChoice1">Landing page</label>  
+                        </div>
+
+                        <div class="radio_element">
+                          <input type="radio" id="contactChoice2"
+                          name="options" value="info">
+                          <label for="contactChoice2">Info portal</label>  
+                        </div>
+
+                        <div class="radio_element">
+                            <input type="radio" id="contactChoice3"
+                            name="options" value="corporative">
+                            <label for="contactChoice3"> Corporative 
+                              web-site</label>
+                        </div>
+
+                        <div class="radio_element">
+                            <input type="radio" id="contactChoice4"
+                            name="options" value="custom">
+                            <label for="contactChoice4">Mobile version</label>
+                        </div>
+                    </div>
+                </div>
+                <button class="button-purple">Submit</button>
+            </form>
+            <h3>Still have any questions ?</h1>
+            <h3>Write me!</h1>
+            <div class="support">
+                <div class="pic">photo</div>
+                <div class="contacts">
+                    <h5>Hi, I'm Xxxx!</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi magni placeat provident debitis ipsam dolorum neque earum fugit at ipsa tempore blanditiis, voluptatum ducimus aspernatur optio incidunt, aperiam recusandae voluptate.</p>
+                    <p class="bold">You can find me:</p>
+                    <div class="links">
+                        <div class="column">
+                            <a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i> @twitter_name</a>
+                            <a href="#"><i class="fa fa-skype" aria-hidden="true"></i> ll_skype_acount</a>
+                            <a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i> facebook_account</a>
+                        </div>
+                        <div class="column">
+                            <a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i> email@mail.com</a>
+                            <a href="#"><i class="fa fa-phone" aria-hidden="true"></i> +111111111</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       </section>
+    </main>
+    <script src="js/aside-portrait.js"></script>
+    <script src="https://use.fontawesome.com/f7d3ebf542.js"></script>
+</body>
+</html>

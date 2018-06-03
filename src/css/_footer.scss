@@ -1,0 +1,92 @@
+@import "mixins";
+@import "var";
+
+footer {
+	padding-left: 18vw;
+	min-height: 100vh;
+	background: url("../img/BGfooter.jpg");
+	display: flex;
+	align-items: center;
+	.wrapper {
+		position: relative;
+		height: 100vh;
+		width: 70vw;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		color: $purple;
+		text-align: center;
+		image{height:6.5vh;}
+		form{
+			position: relative;
+			width: 40vw;
+			.name-email{display: flex; justify-content: space-between;}
+			#name{width: 14vw;}
+			#email{width: 24vw;}
+			textarea{height: 20vh;}
+			input,textarea{
+				margin-top: 3vh;
+				width: 40vw;
+			}
+			button{
+				margin: 4vh auto;
+				width: 15vw;
+			}
+		}
+		.footer-text{padding-bottom:5px;}
+		a{
+			color: $purple;
+			font-size: rem(14);
+			text-decoration: underline;
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	footer{
+		.wrapper{
+			width: 60vw;
+			svg{
+				height: 5.5vh;
+				image{
+					height: auto;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1024px) and (orientation: portrait){
+	footer{
+		.wrapper {
+			image{
+				height: auto;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px){
+	footer{
+		padding-left: 0;
+		.wrapper{
+			width: 50vw;
+			height: auto;
+			object{display:none;}
+			.footer-text{font-size: rem(8);}
+		}
+	}
+}
+
+@media (max-width: 768px) and (orientation: portrait){
+		footer{
+			padding-left: 0;
+			.wrapper{
+				form{
+					button{width: auto;}
+				}
+			}
+		}
+}

@@ -1,0 +1,48 @@
+Options +FollowSymlinks
+#Запрещаем загрузку файлов с внешних сайтов
+#Запускаем url_rewriting
+RewriteEngine On
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^http://(www.)?sashc0.ho.ua/ [nc]
+RewriteRule .*.(gif|jpg|png)$ http://sashc0.ho.ua/htdocs/img/favicon.png[nc]
+
+#Блокируем нежелательных ботов и роботов
+SetEnvIfNoCase user-Agent ^FrontPage [NC,OR]
+SetEnvIfNoCase user-Agent ^Java.* [NC,OR]
+SetEnvIfNoCase user-Agent ^Microsoft.URL [NC,OR]
+SetEnvIfNoCase user-Agent ^MSFrontPage [NC,OR]
+SetEnvIfNoCase user-Agent ^Offline.Explorer [NC,OR]
+SetEnvIfNoCase user-Agent ^[Ww]eb[Bb]andit [NC,OR]
+SetEnvIfNoCase user-Agent ^Zeus [NC]
+<limit get=”” post=”” head=””>
+Order Allow,Deny
+Allow from all
+Deny from env=bad_bot
+</limit>
+
+#Сжимаем компоненты сайта путем включения Gzip
+AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml application/xhtml+xml text/javascript text/css application/x-javascript
+BrowserMatch ^Mozilla/4 gzip-only-text/html
+BrowserMatch ^Mozilla/4.0[678] no-gzip
+BrowserMatch bMSIE !no-gzip !gzip-only-text/html
+
+#Усиливаем кеширование
+FileETag MTime Size
+<ifmodule mod_expires.c>
+<filesmatch “.(jpg|gif|png|css|js)$”>
+ExpiresActive on
+ExpiresDefault “access plus 1 month”
+</filesmatch>
+</ifmodule>
+
+#Убираем расширение файла из URL
+RewriteRule ^(([^/]+/)*[^.]+)$ /$1.php [L]
+
+#Блокируем все ссылки, содержащие <script>
+RewriteCond %{QUERY_STRING} (\<|%3C).*script.*(\>|%3E) [NC,OR]
+#Блокируем все скрипты, которые пытаются изменить переменные PHP Globals:
+RewriteCond %{QUERY_STRING} GLOBALS(=|\[|\%[0-9A-Z]{0,2}) [OR]
+#Блокируем все скрипты, которые пытаются изменить переменную _REQUEST:
+RewriteCond %{QUERY_STRING} _REQUEST(=|\[|\%[0-9A-Z]{0,2})
+#Перенаправляем все подобные на страницу с ошибкой 403 – запрещено
+RewriteRule ^(.*)$ index.php [F,L]

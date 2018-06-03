@@ -1,0 +1,38 @@
+.article{
+	.wrapper{height: auto;}
+	min-height: 100vh;
+	background: url("../img/BGhome-style.jpg");
+	padding-top: rem(40);
+	h5{margin: rem(20) 0 ; line-height: rem(26);}
+	p{margin: rem(10) 0;}
+	.post{
+		padding-bottom: 20px;
+		line-height: rem(22);
+	}
+	.header{
+		position: relative;
+		padding: rem(40);
+		margin-bottom: rem(20);
+		width: calc(100% - 80px);
+		height: 150px;
+		letter-spacing: rem(3);
+		background: url("../img/GBblog-article.jpg");
+		background-size: 100% 100%;
+		h3{
+			margin-bottom: rem(5);
+		}
+		time{
+			position: absolute;
+			bottom: rem(40);
+			left: rem(40);
+		}
+	}
+}
+
+@media (max-width: 768px){
+	.article{
+		.header{
+			height: rem(100);
+		}
+	}
+}

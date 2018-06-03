@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Open+Sans:300,700" rel="stylesheet">
+	<title>Log In</title>
+</head>
+<body>
+	<aside>
+		<div id="show"><i class="fa fa-angle-double-right" aria-hidden="true"></i></div>
+		<div id="hide"><i class="fa fa-angle-double-left" aria-hidden="true"></i></div>
+		<a class="logo" href="#">
+			<object type="image/svg+xml" data="img/logo-white.svg">
+			</object>
+		</a>
+		<ul class="menu">
+			<li><a href="./index.php?controller=default&action=index">Home</a></li>
+			<li><a href="./index.php?controller=default&action=service">Service</a></li>
+			<li><a href="blog.html">Blog</a></li>
+			<li><a href="./index.php?controller=default&action=works">Latest works</a></li>
+		</ul>
+		<div class="contact-us">
+			<ul class="social">
+				<li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-skype" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+			</ul>
+			<a href="#contact" class="bold">Contact Us</a>
+		</div>
+	</aside>
+	<main>
+		<section class="admin">
+			<video loop muted autoplay poster="img/videoframe.jpg" class="video_sashc0">
+				<source src="LL videos/giphy.mp4" type="video/webm">
+			</video>
+			<div class="wrapper">
+				<h1>ADMIN PANEL</h1>
+				<div class="new_admin">
+					<form action="">
+						<h3>Add admin</h3>
+						<input type="text" id="add_admin" placeholder="login">
+						<input type="password" id="add_pass" placeholder="password">
+						<button class="button-purple">Add</button>
+					</form>
+					<form action="">
+						<h3>Remove admin</h3>
+						<input type="text" id="kill_admin" placeholder="login">
+						<button class="button-purple">Remove</button>
+					</form>
+				</div>
+				<div class="new_blog">
+					<form action="">
+						<h3>ADD BLOG ARTICLE</h3>
+						<input type="text" id="title" placeholder="Title">
+						<textarea name="" id="new-article" cols="30" rows="10" placeholder="Article"></textarea>
+						<label for="afile">Choose image to upload</label>
+						<input type="file" name="afile" id="afile" accept="image/*" class="button-purple"/>
+						<div class="video-url">
+							<label for="afile">Choose video to upload</label>
+							<input type="file" name="avid" id="avid" accept="video/*" class="button-purple"/>
+							<label for="vidurl">Or add video URL</label>
+							<input type="text" name="vidurl" id="vidurl" placeholder="Video URL" />
+						</div>
+						<button class="button-purple">Add</button>
+					</form>
+				</div>
+				<div class="new_project">
+					<form action="">
+						<h3>ADD PROJECT</h3>
+						<input type="text" id="proj" placeholder="Name">
+						<input type="text" id="description" placeholder="Description">
+						<input type="file" name="afile" id="afile" accept="*/*" class="button-purple"/>
+						<button class="button-purple">Add</button>
+					</form>
+				</div>
+				<div class="feedback">
+					<h3>Feedback</h3>
+					<div class="box">
+						<p>
+							<span>Name - </span> ?name <br>
+							<span>Email - </span> ?email <br>
+							<span>Phone - </span> ?phone <br>
+							<span>Massege:</span> <br>
+							$text
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<script src="js/aside-portrait.js"></script>
+	<script src="https://use.fontawesome.com/f7d3ebf542.js"></script>
+</body>
+</html>

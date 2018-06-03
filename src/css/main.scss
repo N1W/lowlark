@@ -1,0 +1,256 @@
+@import "mixins";
+@import "var";
+@import "aside";
+@import "footer";
+@import "service";
+@import "blog";
+@import "article";
+@import "contact";
+@import "latest";
+@import "landing";
+@import "admin";
+@import "about";
+
+main {
+	padding-left: 18vw;
+	section{
+		min-height: 100vh; 
+	}
+	.wrapper {
+		width: 70vw;
+		height: 100vh;
+		position: relative;
+		margin: 0 auto;
+	}
+	.lowlark{
+		background: url("../img/BGhome-lowlark.jpg");
+		.wrapper{
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			.column{
+				width: 35vw;
+				img{width: 100%; height: auto;}
+				h5,p {
+					line-height: rem(55);
+					letter-spacing: rem(3);
+				}
+				button{width: 17.5vw;}
+				.button-white{margin-left: 17.5vw;}
+			}
+		}
+	}
+	.old-new{
+		background: url("../img/BGhome-old.jpg");
+		letter-spacing: rem(5);
+		.wrapper{padding-top:4vh;}
+		img{
+			position: absolute;
+			right: 4vw;
+			bottom: 8vh;
+			width: 80vh;
+		}
+	}
+	.desires{
+		background: url("../img/BGhome-desires.jpg");
+		letter-spacing: rem(5);
+		.wrapper{
+				padding: 4vh 0 0 3vw;
+		}
+		.desires__shift_left{
+			padding-left: 11vw;
+		}
+		.desires__photo{
+			display: flex;
+			justify-content: center;
+			padding-top: 3vh;
+			img{height: 64vh;}
+		}
+	}
+	.style{
+		background: url("../img/BGhome-style.jpg");
+		letter-spacing: rem(5);
+		.wrapper{
+			padding-top: 10vh;
+			img{
+				position: absolute;
+				height: 85vh;
+				bottom: 15vh;
+				right: 0;
+			}
+		}
+	}
+}
+
+@media (max-width: 1024px){
+	html{font-size: rem(13);}
+	main {
+		padding-left: 160px;
+		.lowlark{
+			.wrapper{
+				width: 60vw;
+				.column{
+					padding-left: 1vw;
+					width: 30vw;
+					button{
+						width: 15vw;
+						font-size: 15px;
+					}
+					.button-white{margin-left: 15vw;}
+					h1{font-size: rem(40);}
+					h5,p {
+						line-height: rem(45);
+						letter-spacing: rem(1);
+					}
+				}
+			}
+		}
+		.old-new{
+			display: flex;
+			align-items: center;
+			.wrapper{
+				width: 60vw;
+				height: auto;
+				img{position: static; width: 55vw;}
+			}
+		}
+		.desires{
+			.wrapper{
+				width: 60vw;
+			}
+		}
+		.style{
+			display: flex;
+			align-items: center;
+			.wrapper{
+				width: 60vw;
+				height: auto;
+				padding-top: 0;
+				img{
+					position: static;
+					width: 34vw;
+					height: auto;
+					padding-left: 25vw;
+				}
+			}
+		}	
+	}
+}
+
+@media (max-width: 1024px) and (orientation: portrait){
+	html{font-size: rem(13);}
+	main {
+		.wrapper {
+			height: auto;
+		}
+		.lowlark{
+			.wrapper{
+				flex-direction: column-reverse;
+				img{width: 60vw;}
+			}
+		}
+		.old-new{
+			display: flex;
+			align-items: center;
+			.wrapper {
+				padding-top: 0;
+			}
+			img{
+				position: static;
+				width: 70vw;
+			}
+		}
+		.desires{
+			display: flex;
+			align-items: center;
+			.desires__photo{
+				img{height: 75vw;}
+			}
+		}
+		.style{
+			display: flex;
+			align-items: center;
+			.wrapper{
+				padding-top: 0;
+				img{
+					position: static;
+					height: 60vh;
+					width: auto;
+					padding-left: 25vw;
+					margin-top: rem(-30);
+				}
+			}
+		}	
+	}
+}
+
+@media (max-width: 768px){
+	main{
+		padding-left: 0;
+		.lowlark{
+			.wrapper{
+				width: 50vw;
+				flex-direction: column-reverse;
+				.column{
+					width: 50vw;
+					img{
+						width: 50%;
+						height: auto;
+						margin-left: 20%;
+					}
+					h1{
+						font-size: rem(35);
+						line-height: rem(40);
+					}
+					h5,p {
+						line-height: rem(25);
+						letter-spacing: rem(1);
+					}
+					button{
+						width: 25vw;
+						font-size: rem(12);
+						line-height: rem(14);
+						height: 25px;
+					}
+					.button-white{margin-left: 25vw;}
+				}
+			}
+		}
+		.old-new{
+			letter-spacing: rem(1);
+			.wrapper{width: 50vw;}
+		}
+		.desires{
+			letter-spacing: rem(1);
+			.wrapper{
+				width: 50vw;
+			}
+		}
+		.style{
+			overflow: hidden;
+			letter-spacing: rem(1);
+			.wrapper{
+				width: 50vw;
+				img{
+					width: 30vw;
+					padding-left: 20vw;
+					margin-top: 0;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) and (orientation: portrait){
+	main{
+		.style{
+			.wrapper{
+				img{
+					height: 38vh;
+					width: auto;
+				}
+			}
+		}
+	}
+}

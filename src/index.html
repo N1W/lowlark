@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOWLARK</title>
+    <link rel="shortcut icon" type="image/png" href=<%= require("./img/favicon.png") %> >
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Open+Sans:300,700" rel="stylesheet">
+</head>
+<body>
+	<aside>
+    <div id="show"><i class="fa fa-angle-double-right" aria-hidden="true"></i></div>
+    <div id="hide"><i class="fa fa-angle-double-left" aria-hidden="true"></i></div>
+      <a class="logo" href="#">
+				<object type="image/svg+xml" data="img/logo-white.svg">
+<!-- 		<img src="SvgImg.png" width="200" height="200" alt="image format png" /> -->
+				</object>
+      </a>
+        <ul class="menu">
+           <li><a href="./index.php">Home</a></li>
+           <li><a href="./index.php?controller=default&action=service">Service</a></li>
+           <li><a href="./index.php?controller=default&action=blog">Blog</a></li>
+           <li><a href="./index.php?controller=default&action=works">Latest works</a></li>
+        </ul>
+        <form action="#" class="cms-panel">
+        	<span class="hint--always hint--error hint--top" aria-label="Wrong login"><input type="text" placeholder="Admin"></span>
+        	<span class="hint--always hint--error hint--top" aria-label="Wrong password!"><input type="text" placeholder="Password" required></span>
+        	<button class="button-white">Enter</button>
+        </form>
+        <div class="contact-us">
+           <ul class="social">
+               <li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></i></a></li>
+               <li><a href="#"><i class="fa fa-skype" aria-hidden="true"></i></a></li>
+               <li><a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+           </ul>
+           <a href="./index.php?controller=default&action=feedback" class="bold">Contact Us</a>
+        </div>
+   </aside>
+   <main>
+        <section class="lowlark">
+            <div class="wrapper">
+                    <div class="column">
+                        <img src="img/Home-LL.png" alt="LL-comouter">
+                    </div> 
+                    <div class="column">
+                        <h1>LOWLARK</h1>
+                        <h5>Web Design Company.</h5>
+                        <p><strong>We make projects quick, <br/>efficiently and beautiful.</strong></p>
+                        <button class="button-purple"><a href="#">PORTFOLIO</a></button>
+                        <button class="button-white">ABOUT US</button>
+                    </div> 
+            </div>
+        </section>
+        <section class="old-new">
+            <div class="wrapper">
+                <h3 class="bold font60">turning <span class="font90">old</span> <span class="gloria">design</span></h3>
+                <h1 class="font100">into</h1>
+                <h3 class="bold font60"><span class="font90">new</span> <span class="gloria">ones</span></h3>
+                <img src="img/Home-Old.png" alt="Old">
+            </div>
+        </section>
+        <section class="desires">
+            <div class="wrapper">
+                <p class="font48 bold">listen <span class="font72">carefully</span> to you</p>
+                <div class="desires__shift_left">   
+                    <p class="font48 bold">&</p>
+                    <p class="font48 bold"><span class="font72">understand</span> your <span class="gloria">desires</span></p>
+                </div>
+                <div class="desires__photo">    
+                    <img src="img/Home-Desires.png" alt="your-desires">
+                </div>
+            </div>
+        </section>
+        <section class="style">
+            <div class="wrapper">
+                <p class="font60 bold">we <span class="font90">know</span></p>
+                <p class="font60 bold"><span class="font90">what</span> is <span class="gloria">style</span></p>
+                <img src="img/Home-Style.png" alt="style">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="wrapper">
+        <object type="image/svg+xml" data="img/logo_ll_darck.svg">
+<!-- 	 <img src="SvgImg.png" width="200" height="200" alt="image format png" /> -->
+				</object>
+          <a name="contact"></a>
+          <form action="#">
+              <h4 class="bold">CONTACT US</h4>
+              <div class="name-email">
+                <input type="text" id="name" placeholder="Name">
+                <input type="email" id="email" placeholder="E-mail">
+              </div>
+              <input type="tel" id="phone" placeholder="Phone">
+              <textarea name="" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+              <button class="button-footer">SUBMIT</button>
+          </form>
+          <div>
+            <a href="#">Privacy Policy</a>
+          </div>
+        </div>
+    </footer>
+    <div id="newsblock"></div>
+    <script src="js/aside-portrait.js"></script>
+    <script src="https://use.fontawesome.com/f7d3ebf542.js"></script>
+</body>
+</html>
